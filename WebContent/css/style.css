@@ -1,0 +1,455 @@
+/* CSS Document */
+/*!
+ * Custom Stylesheet v1.0.0
+ *
+ * Copyright 2012 Sandeep
+ */
+
+body{ background: url(../img/bg_x.jpg) left top repeat-x, url(../img/bg.jpg) right bottom repeat}
+.spr10{ clear:both; height:10px; line-height:10px; font-size:0px; overflow:hidden}
+.spr20{ clear:both; height:20px; line-height:20px; font-size:0px; overflow:hidden}
+
+.display-none{ display:none;}
+.display-block{ display:block;}
+
+[class^="nicon-"], [class*=" nicon-"] {
+    background-image: url("../img/sprite.png");
+    background-position: 14px 14px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 14px;
+    line-height: 14px;
+    margin-top: 1px;
+    vertical-align: text-top;
+    width: 14px;
+}
+.nicon-delete {background-position: -127px -189px;}
+.nicon-restore {background-position: -153px -189px;}
+.nicon-add {background-position: -179px -189px;}
+
+
+
+label{margin-top:15px;}
+.errorfield{ border:1px solid #FF0000;}
+.signFrom span.email, .signFrom span.pwd{ color:#ff0000;}
+
+/* Logo Start */
+a.logo{ background:url(../img/sprite.png) 0 0 repeat-x; width:240px; height:55px; display:block; text-indent:-99999px; margin:12px 0 0 0}
+a.logo:hover{ background-position:0 0}
+/* Logo End */
+
+/* Header Start */
+.header{ background:url(../img/sprite.png) 0 -55px repeat-x; height:78px; display:block}
+/* Header End */
+
+/* DoctorNote Box Start */
+.dctrNt_box{ background:url(../img/notebox_bg.png) top left repeat; border:1px solid #01556f; color:#FFF; width:470px; height:405px; position:absolute;
+	top:30%; left:15%; z-index:99999; margin:15px 0 0 150px; padding:10px 15px 20px;
+	-webkit-border-radius:3px;
+     -moz-border-radius:3px;
+          border-radius:3px;
+	-webkit-box-shadow: 2px 2px 3px 0px #7C7C7C;
+     -moz-box-shadow: 2px 2px 3px 0px #7C7C7C;
+          box-shadow: 2px 2px 3px 0px #7C7C7C;
+		  
+}
+.dctrNt_box h2{ color: #FFFFFF; font-size: 20px; line-height: normal; margin: 0 0 10px; padding: 0;
+text-shadow: 1px 1px 1px #525252;
+filter: dropshadow(color=#525252, offx=1, offy=1); 
+}
+.dctrNt_box .rulerBox{ background:#FFF; border:1px solid #6f8b96; padding:0 3px;
+	-webkit-box-shadow: inset 0 0 2px 1px #D8D8D8;
+     -moz-box-shadow: inset 0 0 2px 1px #D8D8D8;
+          box-shadow: inset 0 0 2px 1px #D8D8D8;
+}
+.dctrNt_box .rulerTop{ background:#FFF url(../img/sprite.png) 0 -243px repeat-x; height:24px; display:block;}
+a.ntclose{ background:url(../img/sprite.png) -105px -189px repeat-x; width:22px; height:24px; display:block; text-indent:-99999px; position:absolute; top:10px; right:15px;}
+a.ntclose:hover{ background-position:-105px -189px}
+/* DoctorNote Box End */
+
+/* Sign in Start */
+
+.container .signInBox {
+    margin-top: 25px ;
+}
+.signInBox{ margin:10px 0}
+.signIn{ background:#FFF;
+	-webkit-border-radius:3px;
+     -moz-border-radius:3px;
+          border-radius:3px;
+	-webkit-box-shadow: 2px 2px 3px 0px #bfbfbf;
+     -moz-box-shadow: 2px 2px 3px 0px #bfbfbf;
+          box-shadow: 2px 2px 3px 0px #bfbfbf;
+}
+
+.signIn .headline_bg{ background:#96c1d6 url(../img/sprite.png) 0 -57px repeat-x; color:#FFF; padding:0px 0 0; display:block;
+	-webkit-border-radius:3px 3px 0px 0px;
+     -moz-border-radius:3px 3px 0px 0px;
+          border-radius:3px 3px 0px 0px;	
+}
+.signIn .headline_bg h2{ color:#FFF; text-align:left; margin-left:25px; font-size:20px; font-weight:bold; font-family: Arial, Helvetica, sans-serif;
+text-shadow: 1px 1px 1px #525252;
+filter: dropshadow(color=#525252, offx=1, offy=1); 
+}
+.signIn .signFrom{ padding:1px 0 5px 25px ; width:320px}
+
+.signIn .resetFrom{ padding:10px 20px; width:385px}
+/* Sign in End */
+
+/* Forgot Pasword */
+.signIn > p {
+    margin: 20px auto 0;
+    width: 387px;
+}
+.success-msg{
+	margin:0px auto 0;
+    width: 387px; color:#009900; line-height:16px; display:none;
+}
+.error-msg{ color:#FF0000; display:none;}
+
+.capcha{ width:215px; margin-top:15px;}
+label.capcha-text{ margin-top:0;}
+.capcha img{ width:145px; height:42px; border:1px solid #333; margin-bottom:15px;}
+.capcha-input{ width:135px;}
+a.capacha-refresh{ margin-bottom:10px; margin-left:10px;}
+
+.alert-error.info-msg {
+
+    margin: auto;
+    padding: 10px 15px;
+    width: 355px;
+}
+
+/* Forgot Pasword */
+
+
+/* Custom checkbox and radio Start */
+/*	wrapper divs */
+.custom-checkbox, .custom-radio { position: relative; }
+	
+/* input, label positioning */
+.custom-checkbox input, 
+.custom-radio input {	position: absolute;	left: 2px;	top: 3px; margin: 0; z-index: 0;}
+
+.custom-checkbox label, 
+.custom-radio label {display: block; position: relative; z-index: 1; padding-right: 1em; line-height: 1; padding: .5em 0 .5em 25px; margin: 0 0 .3em; cursor: pointer;}
+.seperator {
+    display: block;
+    float: left;
+    line-height: 20px;
+    margin: 25px 10px 10px;
+}
+	
+/* states */
+.custom-checkbox label { background: url(../img/checkbox.png) no-repeat; }
+.custom-radio label { background: url(../img/radiobutton.png) no-repeat; }
+.custom-checkbox label, .custom-radio label {background-position: -14px -14px;}
+
+.custom-checkbox label.hover,
+.custom-checkbox label.focus,
+.custom-radio label.hover,
+.custom-radio label.focus {background-position: -14px -114px;}
+
+.custom-checkbox label.checked, 
+.custom-radio label.checked {	background-position: -14px -214px;}
+
+.custom-checkbox label.checkedHover, 
+.custom-checkbox label.checkedFocus {	background-position: -14px -314px;}
+
+.custom-checkbox label.focus, 
+.custom-radio label.focus {	outline: 1px dotted #ccc;}
+/* Custom checkbox and radio End*/
+
+/* Footer Start */
+.footer{ background:#96c1d6 url(../img/sprite.png) 0 -132px repeat-x; padding:0px 0 0; display:block; margin-top:10px;}
+/* Footer End */
+
+
+/* Left Menu */
+
+
+.module {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    text-shadow: 0 1px 0 #FFFFFF; margin-top:10px;
+}
+.module, .promptbird {
+    background-clip: padding-box;
+    border-radius: 6px 6px 6px 6px;
+    line-height: 16px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.module ul {
+    list-style: none outside none; margin:0 1px 1px;
+}
+
+ul, ol {
+    margin: 0;
+    padding: 0;
+}
+
+
+.module ul:first-child li:first-child .list-link, .module .flex-module:first-child, .module .contrast-flex-module:first-child {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.module li:first-child .list-link, .module .inner:first-child {
+    border-top: 0 none;
+}
+.module .list-link {
+    display: block;
+    padding: 8px 12px;
+    position: relative;
+}
+.module .list-link {
+    background-color: #F9F9F9;
+    border-top: 1px solid #E8E8E8;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset;
+}
+.module .chev-right {
+    position: absolute;
+    right: 12px;
+    top: 9px;
+}
+.chev-right {
+    background-position: 0 -140px;
+    height: 13px;
+    width: 9px;
+}
+i, .icon {
+    background-image: url("../img/twitter_web_sprite_icons.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: text-top;
+}
+.module .list-link:hover, .module .active .list-link{
+	 background-color: #FFFFFF;
+    color: #333333;
+    text-decoration: none;
+}
+
+
+/* Accounts & settings*/
+
+.span8-container{ margin-top:10px; border-radius: 6px 6px 6px 6px; border: 1px solid rgba(0, 0, 0, 0.1); background-color:#fff; padding:10px;}
+
+.settings-page .eReg_mtr{ margin:10px 20px;padding: 0 10px;
+}
+.settings-page .eReg_mtr .noteDetails {
+
+    margin: 0px 0 10px;
+    padding: 1px 12px 8px; position:relative;
+}
+
+.settings-page .eReg_mtr .noteDetails .span_nDocLeft {
+    margin: 10px 10px 0 0;
+    width: 750px;
+}
+.settings-page  label{ margin-top:5px;}
+.save-btn{ margin:10px 0;}
+.user-account{ display:block;}
+.admin-account{ display:none;}
+
+.settings-page .eReg_mtr .doctors-detail{ margin-left:10px; margin-right:10px;}
+.primary-contact{ clear:both;}
+
+/* Registration Confirmation */
+
+.clinic-detail table  {
+	background-color:#e8e7e6; color:#000; margin:0 20px; width:95%;
+	
+}
+.clinic-detail table td h2{ font-size:16px; margin:0; padding:0; line-height:16px; font-family:Arial, Helvetica, sans-serif;}
+.clinic-detail table td{ padding:10px; border:1px solid #cacaca;}
+
+.doctors-detail {
+    /*background-color: #E8E7E6;*/
+    border: 1px solid #CACACA;
+    margin: 15px 20px;
+    padding: 10px 0;
+}
+
+.doctors-detail table{color:#000;  width:95%;}
+.doctors-detail table td h2{ font-size:16px; margin:0; padding:0 0 10px; line-height:16px; font-family:Arial, Helvetica, sans-serif;}
+.doctors-detail table td{ padding:2px 10px;}
+
+
+.btn-wrapper{ width:90%; margin:15px auto;}
+.btn-wrapper .edit-btn{ float:left;}
+.btn-wrapper .confirm-btn{ float:right;}
+
+.del_res ul{ margin:0; padding:0}
+.del_res li{ margin:0; padding:0px 10px; background:#e4e6e1; border-bottom:1px solid #FFF; list-style:none}
+.del_res li.resote{ background:#dfefd4}
+.del_res li.resote a.link_disable{pointer-events: none; cursor: default; color:#b2beb2}
+.del_res li span.Dname{ padding:4px 0; border-right:1px solid #FFF; width:50%;}
+.del_res li span.Ddel{ padding:4px 0; margin-left:39%}
+
+.nicon-restore {
+    background-position: -153px -189px;
+}
+.signFrom label {
+    margin: 15px 0 0;
+}
+
+.signFrom input.span3, .signFrom textarea.span3, .signFrom .uneditable-input.span3{ width:305px;}
+.remember-pwdWrapper{ margin:15px 0}
+.signFrom #checkRemember{ float:left; margin-right:10px;}
+.signFrom .wrapperspan1{ display:block; margin:15px 0 0; }
+/*.form-horizontal label{ margin-top:0;}*/
+.pull-left .cbox{ float:left; margin:17px 10px 0 0}
+.tnc{ float:left;}
+
+.container .right-col{ background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #DEDEDE;
+    box-shadow: 1px 1px 2px #D8D8D8;
+    margin-top: 20px;
+
+    width: 280px;
+	}
+.span2.right-col {
+    margin-left: 15px;
+}
+.activeform-section{
+	background:#FFF url(../img/noteDetails_bg.png) left top repeat; margin:2px 0 0 0; 
+	padding:1px 20px 8px; 
+	-webkit-box-shadow:inset 0px 0px 3px 3px #d8d8d8;
+	-moz-box-shadow:inset 0px 0px 3px 3px #d8d8d8;
+	box-shadow:inset 0px 0px 3px 3px #d8d8d8;
+}
+.banner-160x600 {
+    margin: auto;
+    width: 160px;
+}
+.banner-160x600 img{    
+	border: 1px solid;
+    margin: 20px 0;
+    text-align: center;
+}
+.errorpres{   background-color: #FCF8E3;
+    border: 1px solid #FBEED5;
+    border-radius: 4px 4px 4px 4px;
+    color: #C09853;
+    margin: 0px 0 0;
+    padding: 0 0 0 10px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+.cuntrycode {
+    left: 8px;
+    position: absolute;
+    top: 43px; color:#555555;
+}
+.cuntrycode_reg{
+    left: 8px;
+    position: absolute;
+    top: 29px; color:#555555;
+}
+.span_nDocRight{ position:relative;}
+.span_nDocRight .inputphone{ padding-left:35px;}
+
+.inputTablet1{ float: left; width: 224px; margin-right:10px;}
+.inputMedicinebrand{ float: left; width: 244px; margin-right:10px;}
+.inputPotency1, .inputDays1{ float:left; width:94px; margin-right:10px;}
+.inputDosage1{float:left; width:83px; margin-right:10px;}
+
+
+.detele_pres {
+    background: none repeat scroll 0 0 #DFEFD4;
+    height: 60px;
+    left: 47px;
+    margin: auto;
+    opacity: 0.5;
+    position: absolute;
+    width: 870px;
+}
+
+a.pres_restore {
+   display: block;
+    left: 843px;
+    margin: auto;
+    padding: 20px 0;
+    position: absolute;
+    width: 74px;
+    z-index: 1;
+}
+.language { clear: both;}
+.language {
+    width: 280px;
+}
+
+.language select {
+    margin-top: 3px;
+}
+
+
+
+
+.reminder-textarea {
+    height: 46px;
+    margin: 0 0 0 10px;
+    width: 261px;
+}
+
+.reminderwrap textarea {
+    margin: 10px 0 10px 10px;
+}
+
+.reminderwrap textarea.reminder-textarea {
+    margin: 10px 0 10px 10px;
+}
+.reminderwrap > input{ margin-right: 7px;}
+.doctors-note, .allergies-note{ position: absolute; top: 310px; left: 230px;}
+
+.settings-page .cuntrycode {
+    top: 35px;
+}
+.settings-page .pull-left .cbox {
+    margin: 8px 10px 10px 0;
+}
+.settings-page .alert-error.errorpres {
+    width: 478px;
+}
+.settings-page .pull-left.adminacct-tnc {
+    width: 600px;
+}
+.settings-page .adminacct-tnc > input {
+    float: left;
+    margin:  7px 10px 0 0;
+}
+.signIn > p.forgotpwd-message {
+    margin: 20px 0 0 20px;
+    width: 425px;
+}
+.alert.alert-error.email-msg {
+    width: 260px;
+}
+.alert.alert-error.info-msg {
+    margin: 0 20px;
+}
+.mciid_label{
+	left: 172px;
+    position: absolute;
+    top: 0;
+	}
+#divDoctorInfo .span_nDocLeft label {
+    margin-top: 0;
+}
+.span_nDocRight label {
+    margin-top: 0;
+}
+.prefix {
+    left: 8px;
+    position: absolute;
+    top: 28px; color:#555555;
+}
+.span_nDocRight input.landphone{padding-left:27px;}
+
+.cuntrycodeaccounts {
+	left: 10px;
+    position: absolute;
+    top: 29px;
+}
+#inputDPhone.ccode_acct{ padding-left:35px; width:210px;}
+.errorphonenumber{ clear:both; border-radius: 4px 4px 4px 4px;   padding: 0 0 0 10px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5); width:243px;}

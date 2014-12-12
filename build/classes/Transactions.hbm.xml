@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="com.accounts.udit.pojo.Transactions" table="transactions">
+      <meta attribute="class-description">
+         This class contains the transaction detail. 
+      </meta>
+      <id name="transactionid" type="java.lang.Integer" column="transactionid">
+         <generator class="native"/>
+      </id>
+      <property name="userid" column="userid" type="int"/>
+      <property name="date_of_transaction" column="date_of_transaction" type="date"/>
+      <property name="transaction_to" column="transaction_to" type="string"/>
+      <property name="categoryid" column="categoryid" type="int"/>
+      <property name="transactiontypeid" column="transactiontypeid" type="int"/>
+      <property name="amount" column="amount" type="double"/>
+      <property name="billavailable" column="billavailable" type="boolean"/>
+      <property name="remark" column="remark" type="string"/>
+      
+   </class>
+</hibernate-mapping>

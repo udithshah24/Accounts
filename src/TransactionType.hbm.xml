@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="com.accounts.udit.pojo.TransactionType" table="TransactionType">
+      <meta attribute="class-description">
+         This class contains all the TransactionTypes. 
+      </meta>
+      <id name="transactiontypeid" type="java.lang.Integer" column="transactiontypeid">
+         <generator class="native"/>
+      </id>
+      <property name="transactiontypeaname" column="transactiontypename" type="string"/>
+            
+   </class>
+</hibernate-mapping>

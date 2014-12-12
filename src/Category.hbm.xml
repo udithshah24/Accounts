@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="com.accounts.udit.pojo.Category" table="category">
+      <meta attribute="class-description">
+         This class contains all the categories. 
+      </meta>
+      <id name="categoryid" type="java.lang.Integer" column="categoryid">
+         <generator class="native"/>
+      </id>
+      <property name="categoryname" column="categoryname" type="string"/>
+      <property name="categorytype" column="categorytype" type="string"/>
+            
+   </class>
+</hibernate-mapping>
