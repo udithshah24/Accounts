@@ -59,19 +59,21 @@ public class ViewTransactions extends HttpServlet {
 		
 		ManageTransactionType manageTransactionType=new ManageTransactionType();
 		transactionTypes=manageTransactionType.getAllTransactionTypes();
+		
+		System.out.println("TransactionTypes: "+transactionTypes.size());
 		for(Transactions transaction:transactions){
 		result+="<div class=\"item  col-xs-4 col-lg-4 list-group-item\">\r\n" + 
 				"            <div class=\"col-xs-2\">\r\n" + 
 				"            	<span id=\"date_of_transaction\">"+transaction.getDate_of_transaction()+"</span>\r\n" + 
 				"            </div>\r\n" + 
-				"            <div class=\"col-xs-1\">\r\n" + 
+				"            <div class=\"col-xs-2\">\r\n" + 
 				"            	<span id=\"payment_to\">"+transaction.getTransaction_to()+"</span>\r\n" + 
 				"            </div>\r\n" + 
 				"            <div class=\"col-xs-2\">\r\n" + 
 				"            	<span id=\"category\">"+getCategoryName(transaction.getCategoryid(),categories)+"</span>\r\n" + 
 				"            </div>\r\n" + 
 				"            <div class=\"col-xs-2\">\r\n" + 
-				"            	<span id=\"transactiontype\">"+getTransactionTypeName(transaction.getTransactionid(), transactionTypes)+"</span>\r\n" + 
+				"            	<span id=\"transactiontype\">"+getTransactionTypeName(transaction.getTransactiontypeid(), transactionTypes)+"</span>\r\n" + 
 				"            </div>\r\n" + 
 				"            <div class=\"col-xs-1\">\r\n" + 
 				"            	<span id=\"amount\">"+transaction.getAmount()+"</span>\r\n" + 

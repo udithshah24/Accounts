@@ -15,16 +15,18 @@ public class ManageTransactionType {
 	private static SessionFactory factory;
 	
 	public ManageTransactionType(){
+		
+	}
+	
+	public List<TransactionType> getAllTransactionTypes(){
+		List<TransactionType> transactionTypes=null;
+		
 		try{
 			factory=new Configuration().configure().buildSessionFactory();
 		}catch(Throwable ex){
 			System.err.println("Failed to create sessionFactory object."+ex);
 			throw new ExceptionInInitializerError(ex);
 		}
-	}
-	
-	public List<TransactionType> getAllTransactionTypes(){
-		List<TransactionType> transactionTypes=null;
 		
 		Session session=factory.openSession();
 				
@@ -35,7 +37,9 @@ public class ManageTransactionType {
 		}catch(HibernateException exception){
 			exception.printStackTrace();
 		}finally{
+			
 			session.close();
+			factory.close();
 		}
 		
 		return transactionTypes;

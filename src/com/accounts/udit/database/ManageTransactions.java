@@ -18,15 +18,18 @@ public class ManageTransactions {
 	
 	@SuppressWarnings("deprecation")
 	public ManageTransactions(){
+		
+	}
+	
+	public Integer addTransaction(int userid,Date date_of_transaction,String transaction_to, int categoryid,int transactiontypeid,double amount,boolean billavailable,String remark){
+		
 		try{
 			factory=new Configuration().configure().buildSessionFactory();
 		}catch(Throwable ex){
 			System.err.println("Failed to create sessionFactory object."+ex);
 			throw new ExceptionInInitializerError(ex);
 		}
-	}
-	
-	public Integer addTransaction(int userid,Date date_of_transaction,String transaction_to, int categoryid,int transactiontypeid,double amount,boolean billavailable,String remark){
+		
 		Session session=factory.openSession();
 		Transaction tx=null;
 		Integer transactionId = null;
@@ -40,12 +43,20 @@ public class ManageTransactions {
 			if(tx!=null)tx.rollback();
 			exception.printStackTrace();
 		}finally{
+			
 			session.close();
 		}
 		return transactionId;
 	}
 	
 	public List<Transactions> getAllTransactionsOfAUser(int userid){
+		try{
+			factory=new Configuration().configure().buildSessionFactory();
+		}catch(Throwable ex){
+			System.err.println("Failed to create sessionFactory object."+ex);
+			throw new ExceptionInInitializerError(ex);
+		}
+		
 		List<Transactions> transactions=null;
 		Session session=factory.openSession();
 		try{
@@ -54,7 +65,9 @@ public class ManageTransactions {
 		}catch(HibernateException exception){
 			exception.printStackTrace();
 		}finally{
+			
 			session.close();
+			factory.close();
 		}
 		
 		return transactions;

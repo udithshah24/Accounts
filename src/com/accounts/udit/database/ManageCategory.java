@@ -15,15 +15,17 @@ public class ManageCategory {
 	private static SessionFactory factory;
 		
 	public ManageCategory(){
+		
+	}
+	
+	public List<Category> getAllCategories(){
+		
 		try{
 			factory=new Configuration().configure().buildSessionFactory();
 		}catch(Throwable ex){
 			System.err.println("Failed to create sessionFactory object."+ex);
 			throw new ExceptionInInitializerError(ex);
 		}
-	}
-	
-	public List<Category> getAllCategories(){
 		List<Category> categories=null;
 		
 		Session session=factory.openSession();
@@ -35,6 +37,7 @@ public class ManageCategory {
 		}finally{
 			
 			session.close();
+			factory.close();
 		}
 		
 		return categories;
